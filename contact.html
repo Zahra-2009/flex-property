@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main-box">
+<div class="nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="work.html">MY WORK</a>
+    <a href="contact.html">CONTACT</a>
+</div>
+<h1>CONTACT ME</h1>
+<h3>Let's Talk About Lights & Photos!</h3>
+<div class="big-img">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000">
+</div>
+<div class="contact-flex">
+    <div class="contact-card"><h2>Address</h2><p>Karachi, Sindh, Pakistan</p></div>
+    <div class="contact-card"><h2>Phone</h2><p>0344-0564982</p></div>
+    <div class="contact-card"><h2>Email</h2><p>zm4125220@gmail.com</p></div>
+</div>
+<div class="form-box">
+    <h2 style="text-align:center;">Send Message</h2>
+    <input id="myName" type="text" placeholder="Your Name">
+    <input id="myEmail" type="email" placeholder="Your Email">
+    <textarea id="myMsg" placeholder="Write Your Message..."></textarea>
+    <button onclick="sendMessage()">Send Message</button>
+    <p id="thanks" style="display:none; color:green; font-weight:bold; text-align:center;">Your Message Has Been Sent! Thank You!</p>
+</div>
+</div>
+<script>
+function sendMessage(){
+    var name=document.getElementById("myName").value;
+    var msg=document.getElementById("myMsg").value;
+    if(name==""||msg==""){ alert("Please Fill Your Name and Message First!"); }
+    else{
+        document.getElementById("thanks").style.display="block";
+        alert("Thank You "+name+"! Your Message Has Been Sent!");
+        document.getElementById("myName").value="";
+        document.getElementById("myEmail").value="";
+        document.getElementById("myMsg").value="";
+    }}
+</script>
+</body>
+</html>
